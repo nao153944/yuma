@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+    
+    
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QSE8F3KMXD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QSE8F3KMXD');
+</script>
+    
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>yuma1.0</title>
+  <link rel="shortcut icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> 
+</head>
+
+
+    
+<body>
+    
+    <div class="snslink">
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-twitter"></i>
+           <a href="https://twitter.com/aizawayuma" target="_blank"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-youtube"></i>
+           <a href="https://www.youtube.com/channel/UCU3SIFgfTko1oxMPWq_2QHA/featured" target="_blank"><i class="fab fa-youtube fa-stack-1x"></i></a>
+        </span>    
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <a href="https://nao153944.github.io/pichi/"><img src="pichi.png" width="65" height="65"></a>
+        </span>        
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <a href="https://nao153944.github.io/tuku/"><img src="tuku.png" width="65" height="65"></a>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <a href="https://nao153944.github.io/nono/"><img src="nono.png" width="65" height="65"></a>
+        </span>        
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-trash"></i>
+           <i class="far fa-trash-alt fa-stack-1x fa-inverse" onclick="ConfirmAlert()"></i>
+        </span> 
+        
+        <span class="fa-stack fa-2x fa-lg" onclick="scrolltop()">
+           <i class="fa fa-circle fa-stack-2x circle-up"></i>
+           <i class="fas fas fa-chevron-up fa-stack-1x fa-inverse"></i>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg" onclick="scrollunder()">
+           <i class="fa fa-circle fa-stack-2x circle-up"></i>
+           <i class="fas fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+        </span>
+        
+    </div>
+    
+    
+    <div class ="favorite">
+       <input type="checkbox" class="favorite-checkbox" id="favorite" onclick="FavoriteCheck()" >
+       <label class="c-text-favorite" for="favorite-checkbox">お気に入り</label>
+    </div>
+    
+    
+    <div class="form">
+      <input type="search" inputmode="search" class="select4" id="select4" placeholder="曲名を入力" onchange="SelectCheck()">
+    </div>
+    
+    
+    <div class ="select">
+       <label class="c-text-select">歌手名</label>
+       <select id="select3" class="select3" onchange="SelectCheck()">
+          <option value="none">選択なし</option>
+                  <option value="aiko">aiko</option>
+                  <option value="DECO*27">DECO*27</option>
+                  <option value="Ray">Ray</option>
+                  <option value="やなぎなぎ">やなぎなぎ</option>
+                  <option value="高橋洋子">高橋洋子</option>
+                <optgroup label=""></optgroup>
+       </select>
+  
+
+       <label class="c-text-select">配信日</label>
+       <select id="select1" class="select1" onchange="SelectCheck()">
+          <option value="none">選択なし</option>
+                  <option value="2022/03/27『愛言葉Ⅲ』歌ってみた -藍沢ゆま＆Ui-">2022/03/27『愛言葉Ⅲ』歌ってみた -藍沢ゆま＆Ui-</option>
+                  <option value="2022/03">2022/03</option>
+                  <option value="2022">2022</option>
+                  <option value="2021/11/23【歌ってみた】三つ葉の結びめ/やなぎなぎ【藍沢ゆま】">2021/11/23【歌ってみた】三つ葉の結びめ/やなぎなぎ【藍沢ゆま】</option>
+                  <option value="2021/11">2021/11</option>
+                  <option value="2021/08/10【歌枠】ニコサマ2021/niicoV summer live【藍沢ゆま/新人Vtuber】">2021/08/10【歌枠】ニコサマ2021/niicoV summer live【藍沢ゆま/新人Vtuber】</option>
+                  <option value="2021/08">2021/08</option>
+                  <option value="2021">2021</option>
+                <optgroup label=""></optgroup>
+       </select>
+    </div>
+
+    <div class ="radio">
+       <input class="r-button" type="radio" name="q1" value="デフォルト" onclick="RadioCheck()" checked>
+          <label class="r-text">デフォルト</label>
+       <input class="r-button" type="radio" name="q1" value="配信順" onclick="RadioCheck()">
+          <label class="r-text">配信順</label>
+    </div>
+
+
+<div class ="content" id="content">
+
+              <div id="c-1-1">
+           <input type="checkbox" class="checkbox" id="1-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="gtag('event', 'yc-1-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=kSwfJa5eRQY\x26t=253s')">
+              <c-text-title id="al-c-1-1" class="aiko">カブトムシ</c-text-title><br>
+              <c-text-youtube>2021/08/10【歌枠】ニコサマ2021/niicoV summer live【藍沢ゆま/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-1">
+           <input type="checkbox" class="checkbox" id="2-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="gtag('event', 'yc-2-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=kSwfJa5eRQY\x26t=651s')">
+              <c-text-title id="al-c-2-1" class="やなぎなぎ">ビードロ模様</c-text-title><br>
+              <c-text-youtube>2021/08/10【歌枠】ニコサマ2021/niicoV summer live【藍沢ゆま/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-3-1">
+           <input type="checkbox" class="checkbox" id="3-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="gtag('event', 'yc-3-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=kSwfJa5eRQY\x26t=965s')">
+              <c-text-title id="al-c-3-1" class="高橋洋子">残酷な天使のテーゼ</c-text-title><br>
+              <c-text-youtube>2021/08/10【歌枠】ニコサマ2021/niicoV summer live【藍沢ゆま/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-4-1">
+           <input type="checkbox" class="checkbox" id="4-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="gtag('event', 'yc-4-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=kSwfJa5eRQY\x26t=1308s')">
+              <c-text-title id="al-c-4-1" class="Ray">lull 〜そして僕らは〜</c-text-title><br>
+              <c-text-youtube>2021/08/10【歌枠】ニコサマ2021/niicoV summer live【藍沢ゆま/新人Vtuber】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-5-1">
+           <input type="checkbox" class="checkbox" id="5-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="gtag('event', 'yc-5-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=Ljh_Fzuyizk')">
+              <c-text-title id="al-c-5-1" class="やなぎなぎ">三つ葉の結びめ</c-text-title><br>
+              <c-text-youtube>2021/11/23【歌ってみた】三つ葉の結びめ/やなぎなぎ【藍沢ゆま】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-6-1">
+           <input type="checkbox" class="checkbox" id="6-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="gtag('event', 'yc-6-1'); OpenWindow('https:\/\/www.youtube.com\/watch?v=5dfQyan7g3w')">
+              <c-text-title id="al-c-6-1" class="DECO*27">愛言葉Ⅲ</c-text-title><br>
+              <c-text-youtube>2022/03/27『愛言葉Ⅲ』歌ってみた -藍沢ゆま＆Ui-</c-text-youtube>
+           </button>
+        </div>
+
+      
+
+    </div>
+
+   <script type="text/javascript">
+       
+       
+var list = new Array(
+"1-1",
+"2-1",
+"3-1",
+"4-1",
+"5-1",
+"6-1",
+);
+
+
+
+
+
+var rh = new Array(
+"1-1",
+"2-1",
+"3-1",
+"4-1",
+"5-1",
+"6-1",
+);
+       
+       
+      var loadcontent;
+      var loadcheckbox;
+      var loadlist;
+       
+      window.onload = firstscript();
+      
+       
+       
+      function firstscript(){
+         var i=0;
+         while( i<list.length ){
+            loadlist = JSON.parse(localStorage.getItem('ysave'+list[i]));
+            if(loadlist == "true"){
+               loadcheckbox = document.getElementById(list[i]);
+               loadcheckbox.checked = true;
+            }
+            i++;
+         }
+                    
+         loadlist = JSON.parse(localStorage.getItem('ysavefavorite'));
+         if(loadlist == "true"){
+            loadcheckbox = document.getElementById('favorite');
+            loadcheckbox.checked = true;
+            FavoriteOn();
+         }
+          
+         loadlist = JSON.parse(localStorage.getItem('ysaveradio')); 
+         if(loadlist == "1"){
+            loadcheckbox = document.getElementsByName('q1');
+            loadcheckbox[1].checked = true;
+         } 
+         RadioCheck();
+      }
+       
+       
+       
+      function Save() {
+          var i = 0;
+          while( i<list.length ){
+             loadcheckbox = document.getElementById(list[i]);
+             if(loadcheckbox.checked == true){
+                  localStorage.setItem('ysave'+list[i],JSON.stringify("true"));
+             }
+             else{
+                 loadlist = JSON.parse(localStorage.getItem('ysave'+list[i]));
+                 if(loadlist == "true"){
+                    localStorage.removeItem('ysave'+list[i]);
+                 }
+             }
+             i++;
+          }
+      }
+      
+      
+      function ConfirmAlert(){
+          var message = "保存データを削除しますか？";
+          if(confirm(message)){
+             Delete();
+          }
+      } 
+       
+      function Delete(){
+          var i = 0;
+          while( i<list.length ){
+             localStorage.removeItem('ysave'+list[i]);
+             loadcheckbox = document.getElementById(list[i]);
+             if(loadcheckbox.checked == true){
+                  loadcheckbox.checked = false;
+             }
+             i++;
+          }
+          localStorage.removeItem('ysavefavorite');
+          localStorage.removeItem('ysaveradio');
+      } 
+       
+       
+      function FavoriteCheck() {
+         loadcheckbox = document.getElementById("favorite");
+         if(loadcheckbox.checked == true){
+            FavoriteOn();
+         }
+         else{
+            FavoriteOff();
+         }
+         SelectCheck();
+      } 
+    
+       
+      function FavoriteOn() {
+          var i = 0;
+          while( i<list.length ){
+             loadlist = JSON.parse(localStorage.getItem('ysave'+list[i]));
+             if(loadlist == "true"){
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.remove("c-active-none");
+             }
+             else{
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.add("c-active-none");
+             }
+             i++;
+          }
+          localStorage.setItem('ysavefavorite',JSON.stringify("true"));
+      }
+       
+      function FavoriteOff() {
+          var i = 0;
+          while( i<list.length ){
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.remove("c-active-none");
+             i++;
+          }
+          localStorage.removeItem('ysavefavorite');
+      }
+        
+      
+      function SelectCheck() {
+         var select1check = document.getElementById("select1");
+         var select2check = document.getElementById("select4");
+         var select3check = document.getElementById("select3");
+         var i = 0;
+         while( i<list.length ){
+            loadcontent = document.getElementById("c-"+list[i]);
+            loadcontent.classList.remove("c-select-none");
+            loadcontent.classList.remove("c-select2-none");
+            loadcontent.classList.remove("c-select3-none");
+            i++;
+         }  
+         if(select1check.value != "none"){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("c-"+list[i]);
+               if(loadcontent.textContent.indexOf(select1check.value) == -1 ){
+                  loadcontent.classList.add("c-select-none");
+               }
+               i++;
+            }
+         }
+         if(select2check.value != "" || select2check.value != null){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("al-c-"+list[i]);
+               if(loadcontent.textContent.indexOf(select2check.value) == -1){
+                  loadcontent = document.getElementById("c-"+list[i]);
+                  loadcontent.classList.add("c-select2-none");       
+               }
+               i++
+            }
+         }
+         if(select3check.value != "none"){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("al-c-"+list[i]);
+               if(loadcontent.classList != select3check.value){
+                   loadcontent = document.getElementById("c-"+list[i]);
+                   loadcontent.classList.add("c-select3-none");
+               }
+               i++;
+            }
+         }
+      } 
+       
+       
+      
+      function RadioCheck(){
+         var radiocheck = document.getElementsByName('q1'); 
+         var i = 0;
+         while(i<radiocheck.length){
+            if(radiocheck[i].checked == true){
+               radiocheck = radiocheck[i].value;
+            }
+            i++;
+         }
+         var element = document.getElementById("content");
+
+         if(radiocheck == "デフォルト"){
+             var i=0;
+             while(i<list.length){
+                var elementload = document.getElementById("c-"+ list[i]);
+                element.insertBefore(elementload,element.children[element.lastChild]);
+                i++;
+             }
+             localStorage.removeItem('ysaveradio');
+         } 
+         else if(radiocheck == "配信順"){
+             var i=0;
+             while(i<rh.length){
+                var elementload = document.getElementById("c-"+ rh[i]);
+                element.insertBefore(elementload,element.children[element.lastChild]);
+                i++;
+             }
+             localStorage.setItem('ysaveradio',JSON.stringify('1'));
+         }
+      }  
+       
+       
+       
+      function scrolltop(){
+         window.scroll({top: 0, behavior: 'smooth'});
+      };  
+       
+      function scrollunder(){
+         var element = document.documentElement;
+         var bottom = element.scrollHeight - element.clientHeight;
+         window.scrollTo({top: bottom, left: 0, behavior: 'smooth'});
+      };   
+       
+       
+       
+      function OpenWindow(url) {
+         window.open(url,"blank","width=800,height=720,left=900,top=100");
+      } 
+       
+       
+       
+       
+   </script>
+    
+
+
+    
+</body>
+    
+    
+    
+    
+    
+</html>
